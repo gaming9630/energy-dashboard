@@ -1,0 +1,3 @@
+__pycache__/
+*.pyc
+_selftest_data.json

@@ -1,0 +1,226 @@
+{
+  "metrics": {
+    "crack321": {
+      "value": 66.7,
+      "asOf": "2026-09-01",
+      "source": "מחושב · ספוט USGC מול Brent (EIA)",
+      "weeklyPct": -0.2,
+      "yearlyPct": 160.0
+    },
+    "brent": {
+      "value": 96.02,
+      "asOf": "2026-09-01",
+      "source": "EIA · Brent ספוט",
+      "weeklyPct": 8.8,
+      "yearlyPct": 43.1
+    },
+    "ttf": {
+      "value": 74.97,
+      "asOf": "2026-09-07",
+      "weeklyPct": null,
+      "yearlyPct": 126.73,
+      "source": "TradingEconomics · סריקה (בלי שינוי שבועי)"
+    },
+    "gasoline": {
+      "value": 4.071,
+      "asOf": "2026-08-31",
+      "source": "EIA · ממוצע קמעונאי ארה\"ב",
+      "weeklyPct": -0.3,
+      "yearlyPct": 28.1
+    },
+    "diesel": {
+      "value": 5.599,
+      "asOf": "2026-08-31",
+      "source": "EIA · ממוצע קמעונאי ארה\"ב",
+      "weeklyPct": -0.9,
+      "yearlyPct": 49.9
+    },
+    "kerosene": {
+      "value": 4.19,
+      "asOf": "2026-09-01",
+      "source": "EIA · ספוט מפרץ מקסיקו",
+      "weeklyPct": 15.8,
+      "yearlyPct": 97.6
+    },
+    "hormuzTankers": {
+      "value": null,
+      "asOf": null,
+      "weeklyPct": null,
+      "yearlyPct": null,
+      "source": "דורש הזנה ידנית"
+    },
+    "shipsHit": {
+      "value": null,
+      "asOf": null,
+      "weeklyPct": null,
+      "yearlyPct": null,
+      "source": "דורש הזנה ידנית"
+    },
+    "hormuzVolume": {
+      "value": null,
+      "asOf": null,
+      "weeklyPct": null,
+      "yearlyPct": null,
+      "source": "דורש הזנה ידנית"
+    },
+    "usExports": {
+      "value": 11.9,
+      "asOf": "2026-08-28",
+      "source": "EIA · שבועי",
+      "weeklyPct": 2.7,
+      "yearlyPct": 12.1
+    },
+    "crudeStocks": {
+      "value": -4.45,
+      "asOf": "2026-08-28",
+      "weeklyPct": null,
+      "yearlyPct": null,
+      "source": "EIA · שינוי שבועי (רמה 424.5 מלמ\"ח)"
+    },
+    "distillateStocks": {
+      "value": 0.8,
+      "asOf": "2026-08-28",
+      "weeklyPct": null,
+      "yearlyPct": null,
+      "source": "EIA · שינוי שבועי (רמה 104.2 מלמ\"ח)"
+    }
+  },
+  "log": [
+    {
+      "ok": false,
+      "src": "Yahoo ULSD / heating oil",
+      "msg": "שתי הנקודות נכשלו (429/חסימה)",
+      "t": "06:04:45"
+    },
+    {
+      "ok": false,
+      "src": "Yahoo RBOB gasoline",
+      "msg": "שתי הנקודות נכשלו (429/חסימה)",
+      "t": "06:04:45"
+    },
+    {
+      "ok": false,
+      "src": "Yahoo Brent front-month",
+      "msg": "שתי הנקודות נכשלו (429/חסימה)",
+      "t": "06:04:45"
+    },
+    {
+      "ok": false,
+      "src": "Yahoo Dutch TTF gas",
+      "msg": "שתי הנקודות נכשלו (429/חסימה)",
+      "t": "06:04:45"
+    },
+    {
+      "ok": false,
+      "src": "Stooq ttf",
+      "msg": "חסימת בוטים (דף HTML)",
+      "t": "06:04:46"
+    },
+    {
+      "ok": false,
+      "src": "Stooq ulsd",
+      "msg": "חסימת בוטים (דף HTML)",
+      "t": "06:04:46"
+    },
+    {
+      "ok": false,
+      "src": "Stooq brent",
+      "msg": "חסימת בוטים (דף HTML)",
+      "t": "06:04:46"
+    },
+    {
+      "ok": false,
+      "src": "Stooq rbob",
+      "msg": "חסימת בוטים (דף HTML)",
+      "t": "06:04:46"
+    },
+    {
+      "ok": true,
+      "src": "TradingEconomics TTF",
+      "msg": "74.97 EUR/MWh @ 2026-09-07 (סריקה, בלי שינוי שבועי)",
+      "t": "06:04:47"
+    },
+    {
+      "ok": true,
+      "src": "EIA קרוסין ספוט USGC",
+      "msg": "4.1900 @ 2026-09-01 (500 נקודות)",
+      "t": "06:04:49"
+    },
+    {
+      "ok": true,
+      "src": "EIA ייצוא נפט ומוצרים",
+      "msg": "11.8960 @ 2026-08-28 (500 נקודות)",
+      "t": "06:04:49"
+    },
+    {
+      "ok": true,
+      "src": "EIA בנזין קמעונאי",
+      "msg": "4.0710 @ 2026-08-31 (500 נקודות)",
+      "t": "06:04:49"
+    },
+    {
+      "ok": true,
+      "src": "EIA דיזל קמעונאי",
+      "msg": "5.5990 @ 2026-08-31 (500 נקודות)",
+      "t": "06:04:49"
+    },
+    {
+      "ok": true,
+      "src": "EIA מלאי גולמי",
+      "msg": "424.4600 @ 2026-08-28 (500 נקודות)",
+      "t": "06:04:49"
+    },
+    {
+      "ok": true,
+      "src": "EIA בנזין ספוט USGC",
+      "msg": "3.4430 @ 2026-09-01 (500 נקודות)",
+      "t": "06:04:51"
+    },
+    {
+      "ok": true,
+      "src": "EIA ULSD ספוט USGC",
+      "msg": "4.7340 @ 2026-09-01 (500 נקודות)",
+      "t": "06:04:51"
+    },
+    {
+      "ok": true,
+      "src": "EIA Brent ספוט",
+      "msg": "96.0200 @ 2026-09-01 (500 נקודות)",
+      "t": "06:04:51"
+    },
+    {
+      "ok": true,
+      "src": "EIA מלאי תזקיקים",
+      "msg": "104.1870 @ 2026-08-28 (500 נקודות)",
+      "t": "06:04:51"
+    },
+    {
+      "ok": true,
+      "src": "crudeStocks",
+      "msg": "-4.45 מיליון חביות",
+      "t": "06:04:51"
+    },
+    {
+      "ok": true,
+      "src": "distillateStocks",
+      "msg": "+0.80 מיליון חביות",
+      "t": "06:04:51"
+    },
+    {
+      "ok": true,
+      "src": "גיבוי",
+      "msg": "Brent נלקח מ-EIA ספוט",
+      "t": "06:04:51"
+    },
+    {
+      "ok": true,
+      "src": "מרווח זיקוק",
+      "msg": "66.7 $/חבית @ 2026-09-01",
+      "t": "06:04:51"
+    }
+  ],
+  "filled": 9,
+  "total": 12,
+  "elapsed": 13.7,
+  "updatedAt": "2026-09-07T06:04:51"
+}
