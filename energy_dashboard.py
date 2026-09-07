@@ -21,7 +21,7 @@
 import argparse, http.cookiejar, json, os, re, sys, threading, time
 from concurrent import futures
 import urllib.parse, urllib.request
-from datetime import date, datetime, timedelta
+from datetime import date, datetime, timedelta, timezone
 from http.server import ThreadingHTTPServer, BaseHTTPRequestHandler
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -593,7 +593,7 @@ def collect(eia_key):
         "filled": filled,
         "total": len(METRIC_IDS),
         "elapsed": round(time.time() - t0, 1),
-        "updatedAt": datetime.now().isoformat(timespec="seconds"),
+        "updatedAt": datetime.now(timezone.utc).isoformat(timespec="seconds"),
     }
 
 
