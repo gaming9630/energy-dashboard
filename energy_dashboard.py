@@ -59,7 +59,7 @@ def log(ok, src, msg):
             "ok": bool(ok),
             "src": src,
             "msg": str(msg),
-            "t": datetime.now().strftime("%H:%M:%S"),
+            "t": datetime.now(timezone.utc).isoformat(timespec="seconds"),
         }
     )
     print(("  ok   " if ok else " FAIL  ") + src + "  ->  " + str(msg), flush=True)
@@ -803,8 +803,9 @@ function render(){
 function setStatus(k,t){$('dot').className='dot'+(k==='ok'?'':k==='err'?' err':' stale');$('status').textContent=t;}
 function note(m,e){const n=$('note');n.textContent=m;n.className='note'+(e?' err':'');}
 function hideNote(){$('note').className='note hide';}
+function localTime(t){const d=t?new Date(t):null;return d&&!isNaN(d)?d.toLocaleTimeString('he-IL'):(t||'');}
 function paintDiag(){$('diagList').innerHTML=diagLines.length
- ?diagLines.map(l=>'<li class="'+(l.ok?'okc':'badc')+'">'+esc((l.t||'')+' '+l.src+' -> '+l.msg)+'</li>').join('')
+ ?diagLines.map(l=>'<li class="'+(l.ok?'okc':'badc')+'">'+esc(localTime(l.t)+' '+l.src+' -> '+l.msg)+'</li>').join('')
  :'<li>אין רשומות.</li>';}
 
 function apply(p){
