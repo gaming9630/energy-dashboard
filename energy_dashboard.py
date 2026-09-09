@@ -192,6 +192,7 @@ YAHOO = {
 }
 _CRUMB = None
 _YAHOO_READY = False
+_CONTRACT_MONTH = {}  # symbol -> "Oct 26" וכד', רק כשיאהו חושף חודש מפורש (לא Brent/TTF)
 
 
 def yahoo_auth():
@@ -251,6 +252,10 @@ def yahoo(symbol, label):
     except Exception as e:
         log(False, "Yahoo " + label, "מבנה לא צפוי: %s | %s" % (e, txt[:90]))
         return []
+    meta_name = (res.get("meta") or {}).get("shortName") or ""
+    m = re.search(r"([A-Z][a-z]{2} \d{2})\s*$", meta_name.strip())
+    if m:
+        _CONTRACT_MONTH[symbol] = m.group(1)
     pts = [
         {"date": datetime.utcfromtimestamp(t).strftime("%Y-%m-%d"), "close": float(c)}
         for t, c in zip(ts, cl)
@@ -576,8 +581,14 @@ def collect(eia_key):
     if out["crack321"]["value"] is None and all(
         fut.get(k) for k in ("rbob", "ulsd", "brent")
     ):
+        months = {
+            _CONTRACT_MONTH[YAHOO[k][0]]
+            for k in ("rbob", "ulsd")
+            if YAHOO[k][0] in _CONTRACT_MONTH
+        }
+        month_tag = " (%s)" % " / ".join(sorted(months)) if months else ""
         ser = crack_series(fut["rbob"], fut["ulsd"], fut["brent"])
-        e = entry(ser, "מחושב · חוזי RBOB/ULSD מול Brent", 1)
+        e = entry(ser, "מחושב · חוזי RBOB/ULSD מול Brent" + month_tag, 1)
         if e:
             out["crack321"] = e
             log(True, "מרווח זיקוק", "%.1f $/חבית (מחוזים)" % e["value"])
