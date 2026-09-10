@@ -1,8 +1,12 @@
-name: Daily data refresh
+name: Market-close data refresh
 
 on:
   schedule:
-    - cron: "0 3 * * *"   # 03:00 UTC ~= 05:00-06:00 Israel time, after all markets close
+    # Note: GitHub Actions cron only runs in UTC, so these UTC hours are picked
+    # to match Israel Daylight Time (UTC+3) and will drift by ~1 hour during
+    # the few weeks around DST transitions (Israel/EU/US switch on different dates).
+    - cron: "0 17 * * *"   # ~20:00 Israel time -- shortly after TTF/ICE Endex close (~17:30 Amsterdam)
+    - cron: "0 20 * * *"   # ~23:00 Israel time -- shortly after NYMEX settlement (~14:30 ET) for Brent/RBOB/ULSD
   workflow_dispatch: {}
 
 permissions:
