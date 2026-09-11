@@ -26,6 +26,7 @@ from http.server import ThreadingHTTPServer, BaseHTTPRequestHandler
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 DATA_FILE = os.path.join(HERE, "data.json")
+TTF_HISTORY_FILE = os.path.join(HERE, "ttf_history.json")
 UA = (
     "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 "
     "(KHTML, like Gecko) Chrome/124.0 Safari/537.36"
@@ -359,7 +360,29 @@ def stooq(symbol, label):
 # ════════════════════════════════════════════════════════════ TradingEconomics (גיבוי אחרון ל-TTF)
 # אין ל-TTF (גז הולנדי) שום סדרה חינמית רשמית (לא EIA, לא Yahoo/Stooq כשחסומים).
 # הדף הציבורי הזה חושף בתגית meta description ערך יומי + שינוי שנתי, בלי היסטוריה מלאה —
-# לכן אין שינוי שבועי, וזו סריקה לא-רשמית שעלולה להישבר אם הניסוח באתר ישתנה.
+# לכן שינוי שבועי לא זמין ישירות, וזו סריקה לא-רשמית שעלולה להישבר אם הניסוח באתר ישתנה.
+# את השינוי השבועי בונים בעצמנו לאורך זמן ב-ttf_history (ראו load/save/update למטה).
+def load_ttf_history():
+    try:
+        with open(TTF_HISTORY_FILE, encoding="utf-8") as f:
+            return json.load(f)
+    except Exception:
+        return []
+
+
+def update_ttf_history(point):
+    """מוסיף/מחליף נקודה של יום נתון, שומר עד 400 הימים האחרונים."""
+    hist = [p for p in load_ttf_history() if p["date"] != point["date"]]
+    hist.append(point)
+    hist.sort(key=lambda p: p["date"])
+    hist = hist[-400:]
+    tmp = TTF_HISTORY_FILE + ".tmp"
+    with open(tmp, "w", encoding="utf-8") as f:
+        json.dump(hist, f, ensure_ascii=False, indent=2)
+    os.replace(tmp, TTF_HISTORY_FILE)
+    return hist
+
+
 def te_ttf():
     txt = http_get(
         "https://tradingeconomics.com/commodity/eu-natural-gas",
@@ -386,11 +409,7 @@ def te_ttf():
     my = re.search(r"(up|down) ([\d.]+)% compared to the same time last year", desc)
     if my:
         yearly = float(my.group(2)) * (-1 if my.group(1) == "down" else 1)
-    log(
-        True,
-        "TradingEconomics TTF",
-        "%.2f EUR/MWh @ %s (סריקה, בלי שינוי שבועי)" % (value, d),
-    )
+    log(True, "TradingEconomics TTF", "%.2f EUR/MWh @ %s (סריקה)" % (value, d))
     return {"value": round(value, 2), "asOf": d, "yearlyPct": yearly}
 
 
@@ -502,12 +521,15 @@ def collect(eia_key):
     else:
         te = te_ttf()
         if te:
+            hist = update_ttf_history({"date": te["asOf"], "close": te["value"]})
+            w = pick_back(hist, 7)
+            weekly = pct(te["value"], w["close"]) if w else None
             out["ttf"] = {
                 "value": te["value"],
                 "asOf": te["asOf"],
-                "weeklyPct": None,
+                "weeklyPct": weekly,
                 "yearlyPct": te["yearlyPct"],
-                "source": "TradingEconomics · סריקה (בלי שינוי שבועי)",
+                "source": "TradingEconomics · סריקה (שינוי שבועי נבנה מריצות קודמות)",
             }
         else:
             log(
@@ -1142,7 +1164,7 @@ def diagnose(eia_key):
                 % (
                     key,
                     (
-                        "%.2f @ %s (TradingEconomics, בלי שינוי שבועי)"
+                        "%.2f @ %s (TradingEconomics)"
                         % (te["value"], te["asOf"])
                     )
                     if te
