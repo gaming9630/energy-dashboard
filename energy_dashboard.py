@@ -522,8 +522,12 @@ def collect(eia_key):
         te = te_ttf()
         if te:
             hist = update_ttf_history({"date": te["asOf"], "close": te["value"]})
-            w = pick_back(hist, 7)
-            weekly = pct(te["value"], w["close"]) if w else None
+            span = (
+                datetime.strptime(te["asOf"], "%Y-%m-%d")
+                - datetime.strptime(hist[0]["date"], "%Y-%m-%d")
+            ).days
+            w = pick_back(hist, 7) if span >= 4 else None
+            weekly = pct(te["value"], w["close"]) if w and w["date"] != te["asOf"] else None
             out["ttf"] = {
                 "value": te["value"],
                 "asOf": te["asOf"],
