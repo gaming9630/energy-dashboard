@@ -15,18 +15,18 @@
       "yearlyPct": 100.9
     },
     "ttf": {
-      "value": 86.65,
-      "asOf": "2026-10-20",
-      "weeklyPct": -0.1,
-      "yearlyPct": 169.1,
+      "value": 86.88,
+      "asOf": "2026-10-21",
+      "weeklyPct": -0.8,
+      "yearlyPct": 173.49,
       "source": "TradingEconomics · סריקה (שינוי שבועי נבנה מריצות קודמות)"
     },
     "gasoline": {
-      "value": 4.284,
-      "asOf": "2026-10-19",
+      "value": 4.331,
+      "asOf": "2026-10-12",
       "source": "EIA · ממוצע קמעונאי ארה\"ב",
-      "weeklyPct": -1.1,
-      "yearlyPct": 41.9
+      "weeklyPct": -0.5,
+      "yearlyPct": 41.5
     },
     "diesel": {
       "value": 6.276,
@@ -36,11 +36,11 @@
       "yearlyPct": 73.4
     },
     "kerosene": {
-      "value": 4.562,
-      "asOf": "2026-10-14",
+      "value": 4.632,
+      "asOf": "2026-10-20",
       "source": "EIA · ספוט מפרץ מקסיקו",
-      "weeklyPct": 4.1,
-      "yearlyPct": 116.7
+      "weeklyPct": 0.2,
+      "yearlyPct": 121.3
     },
     "hormuzTankers": {
       "value": null,
@@ -90,125 +90,149 @@
       "ok": true,
       "src": "Yahoo auth",
       "msg": "1 עוגיות, בלי crumb — ננסה בלעדיו",
-      "t": "2026-10-20T22:51:48+00:00"
+      "t": "2026-10-21T20:29:43+00:00"
     },
     {
       "ok": false,
       "src": "Yahoo Brent front-month",
       "msg": "שתי הנקודות נכשלו (429/חסימה)",
-      "t": "2026-10-20T22:51:54+00:00"
-    },
-    {
-      "ok": false,
-      "src": "Yahoo Dutch TTF gas",
-      "msg": "שתי הנקודות נכשלו (429/חסימה)",
-      "t": "2026-10-20T22:51:54+00:00"
-    },
-    {
-      "ok": false,
-      "src": "Yahoo RBOB gasoline",
-      "msg": "שתי הנקודות נכשלו (429/חסימה)",
-      "t": "2026-10-20T22:51:54+00:00"
+      "t": "2026-10-21T20:29:50+00:00"
     },
     {
       "ok": false,
       "src": "Yahoo ULSD / heating oil",
       "msg": "שתי הנקודות נכשלו (429/חסימה)",
-      "t": "2026-10-20T22:51:54+00:00"
+      "t": "2026-10-21T20:29:50+00:00"
     },
     {
       "ok": false,
-      "src": "Stooq brent",
-      "msg": "חסימת בוטים (דף HTML)",
-      "t": "2026-10-20T22:51:57+00:00"
+      "src": "Yahoo Dutch TTF gas",
+      "msg": "שתי הנקודות נכשלו (429/חסימה)",
+      "t": "2026-10-21T20:29:50+00:00"
+    },
+    {
+      "ok": false,
+      "src": "Yahoo RBOB gasoline",
+      "msg": "שתי הנקודות נכשלו (429/חסימה)",
+      "t": "2026-10-21T20:29:50+00:00"
     },
     {
       "ok": false,
       "src": "Stooq ttf",
       "msg": "חסימת בוטים (דף HTML)",
-      "t": "2026-10-20T22:51:57+00:00"
+      "t": "2026-10-21T20:29:53+00:00"
     },
     {
       "ok": false,
       "src": "Stooq rbob",
       "msg": "חסימת בוטים (דף HTML)",
-      "t": "2026-10-20T22:51:57+00:00"
+      "t": "2026-10-21T20:29:53+00:00"
+    },
+    {
+      "ok": false,
+      "src": "Stooq brent",
+      "msg": "חסימת בוטים (דף HTML)",
+      "t": "2026-10-21T20:29:53+00:00"
     },
     {
       "ok": false,
       "src": "Stooq ulsd",
       "msg": "חסימת בוטים (דף HTML)",
-      "t": "2026-10-20T22:51:57+00:00"
+      "t": "2026-10-21T20:29:53+00:00"
     },
     {
       "ok": true,
       "src": "TradingEconomics TTF",
-      "msg": "86.65 EUR/MWh @ 2026-10-20 (סריקה)",
-      "t": "2026-10-20T22:51:57+00:00"
+      "msg": "86.88 EUR/MWh @ 2026-10-21 (סריקה)",
+      "t": "2026-10-21T20:29:53+00:00"
     },
     {
-      "ok": false,
-      "src": "EIA מלאי גולמי",
-      "msg": "TimeoutError: The read operation timed out",
-      "t": "2026-10-20T22:52:18+00:00"
-    },
-    {
-      "ok": false,
+      "ok": true,
       "src": "EIA ייצוא נפט ומוצרים",
-      "msg": "TimeoutError: The read operation timed out",
-      "t": "2026-10-20T22:52:18+00:00"
+      "msg": "11.9440 @ 2026-10-09 (500 נקודות)",
+      "t": "2026-10-21T20:30:05+00:00"
     },
     {
-      "ok": false,
-      "src": "EIA בנזין קמעונאי",
-      "msg": "TimeoutError: The read operation timed out",
-      "t": "2026-10-20T22:52:18+00:00"
+      "ok": true,
+      "src": "EIA מלאי גולמי",
+      "msg": "415.5770 @ 2026-10-09 (500 נקודות)",
+      "t": "2026-10-21T20:30:05+00:00"
     },
     {
-      "ok": false,
+      "ok": true,
       "src": "EIA קרוסין ספוט USGC",
-      "msg": "TimeoutError: The read operation timed out",
-      "t": "2026-10-20T22:52:18+00:00"
+      "msg": "4.6320 @ 2026-10-20 (500 נקודות)",
+      "t": "2026-10-21T20:30:05+00:00"
+    },
+    {
+      "ok": true,
+      "src": "EIA בנזין קמעונאי",
+      "msg": "4.3310 @ 2026-10-12 (500 נקודות)",
+      "t": "2026-10-21T20:30:06+00:00"
     },
     {
       "ok": false,
       "src": "EIA דיזל קמעונאי",
       "msg": "TimeoutError: The read operation timed out",
-      "t": "2026-10-20T22:52:18+00:00"
+      "t": "2026-10-21T20:30:15+00:00"
     },
     {
-      "ok": false,
+      "ok": true,
       "src": "EIA בנזין ספוט USGC",
-      "msg": "TimeoutError: The read operation timed out",
-      "t": "2026-10-20T22:52:40+00:00"
+      "msg": "3.5250 @ 2026-10-14 (500 נקודות)",
+      "t": "2026-10-21T20:30:16+00:00"
     },
     {
-      "ok": false,
+      "ok": true,
       "src": "EIA מלאי תזקיקים",
-      "msg": "TimeoutError: The read operation timed out",
-      "t": "2026-10-20T22:52:40+00:00"
+      "msg": "102.6110 @ 2026-10-09 (500 נקודות)",
+      "t": "2026-10-21T20:30:16+00:00"
     },
     {
-      "ok": false,
-      "src": "EIA Brent ספוט",
-      "msg": "TimeoutError: The read operation timed out",
-      "t": "2026-10-20T22:52:40+00:00"
-    },
-    {
-      "ok": false,
+      "ok": true,
       "src": "EIA ULSD ספוט USGC",
-      "msg": "TimeoutError: The read operation timed out",
-      "t": "2026-10-20T22:52:40+00:00"
+      "msg": "4.8440 @ 2026-10-14 (500 נקודות)",
+      "t": "2026-10-21T20:30:16+00:00"
+    },
+    {
+      "ok": true,
+      "src": "EIA Brent ספוט",
+      "msg": "126.5500 @ 2026-10-14 (500 נקודות)",
+      "t": "2026-10-21T20:30:18+00:00"
+    },
+    {
+      "ok": true,
+      "src": "crudeStocks",
+      "msg": "-8.56 מיליון חביות",
+      "t": "2026-10-21T20:30:18+00:00"
+    },
+    {
+      "ok": true,
+      "src": "distillateStocks",
+      "msg": "-2.53 מיליון חביות",
+      "t": "2026-10-21T20:30:18+00:00"
+    },
+    {
+      "ok": true,
+      "src": "גיבוי",
+      "msg": "Brent נלקח מ-EIA ספוט",
+      "t": "2026-10-21T20:30:18+00:00"
+    },
+    {
+      "ok": true,
+      "src": "מרווח זיקוק",
+      "msg": "40.0 $/חבית @ 2026-10-14",
+      "t": "2026-10-21T20:30:18+00:00"
     },
     {
       "ok": true,
       "src": "מיזוג",
-      "msg": "8 ערכים קודמים נשמרו",
-      "t": "2026-10-20T22:52:40+00:00"
+      "msg": "1 ערכים קודמים נשמרו",
+      "t": "2026-10-21T20:30:18+00:00"
     }
   ],
   "filled": 9,
   "total": 12,
-  "elapsed": 55.1,
-  "updatedAt": "2026-10-20T22:52:40+00:00"
+  "elapsed": 38.7,
+  "updatedAt": "2026-10-21T20:30:18+00:00"
 }
