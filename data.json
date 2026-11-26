@@ -15,9 +15,9 @@
       "yearlyPct": 41.6
     },
     "ttf": {
-      "value": 87.89,
-      "asOf": "2026-11-25",
-      "weeklyPct": 8.3,
+      "value": 87.57,
+      "asOf": "2026-11-26",
+      "weeklyPct": 2.8,
       "yearlyPct": null,
       "source": "TradingEconomics · סריקה (שינוי שבועי נבנה מריצות קודמות)"
     },
@@ -90,131 +90,125 @@
       "ok": true,
       "src": "Yahoo auth",
       "msg": "1 עוגיות, בלי crumb — ננסה בלעדיו",
-      "t": "2026-11-26T00:52:55+00:00"
-    },
-    {
-      "ok": false,
-      "src": "Yahoo Brent front-month",
-      "msg": "שתי הנקודות נכשלו (429/חסימה)",
-      "t": "2026-11-26T00:53:01+00:00"
-    },
-    {
-      "ok": false,
-      "src": "Yahoo RBOB gasoline",
-      "msg": "שתי הנקודות נכשלו (429/חסימה)",
-      "t": "2026-11-26T00:53:02+00:00"
+      "t": "2026-11-26T02:35:03+00:00"
     },
     {
       "ok": false,
       "src": "Yahoo ULSD / heating oil",
       "msg": "שתי הנקודות נכשלו (429/חסימה)",
-      "t": "2026-11-26T00:53:02+00:00"
+      "t": "2026-11-26T02:35:09+00:00"
+    },
+    {
+      "ok": false,
+      "src": "Yahoo RBOB gasoline",
+      "msg": "שתי הנקודות נכשלו (429/חסימה)",
+      "t": "2026-11-26T02:35:09+00:00"
     },
     {
       "ok": false,
       "src": "Yahoo Dutch TTF gas",
       "msg": "שתי הנקודות נכשלו (429/חסימה)",
-      "t": "2026-11-26T00:53:02+00:00"
+      "t": "2026-11-26T02:35:09+00:00"
     },
     {
       "ok": false,
-      "src": "Stooq ulsd",
-      "msg": "חסימת בוטים (דף HTML)",
-      "t": "2026-11-26T00:53:04+00:00"
-    },
-    {
-      "ok": false,
-      "src": "Stooq rbob",
-      "msg": "חסימת בוטים (דף HTML)",
-      "t": "2026-11-26T00:53:04+00:00"
+      "src": "Yahoo Brent front-month",
+      "msg": "שתי הנקודות נכשלו (429/חסימה)",
+      "t": "2026-11-26T02:35:09+00:00"
     },
     {
       "ok": false,
       "src": "Stooq brent",
       "msg": "חסימת בוטים (דף HTML)",
-      "t": "2026-11-26T00:53:04+00:00"
+      "t": "2026-11-26T02:35:11+00:00"
     },
     {
       "ok": false,
       "src": "Stooq ttf",
       "msg": "חסימת בוטים (דף HTML)",
-      "t": "2026-11-26T00:53:04+00:00"
+      "t": "2026-11-26T02:35:11+00:00"
+    },
+    {
+      "ok": false,
+      "src": "Stooq rbob",
+      "msg": "חסימת בוטים (דף HTML)",
+      "t": "2026-11-26T02:35:11+00:00"
+    },
+    {
+      "ok": false,
+      "src": "Stooq ulsd",
+      "msg": "חסימת בוטים (דף HTML)",
+      "t": "2026-11-26T02:35:11+00:00"
     },
     {
       "ok": true,
       "src": "TradingEconomics TTF",
-      "msg": "87.89 EUR/MWh @ 2026-11-25 (סריקה)",
-      "t": "2026-11-26T00:53:04+00:00"
-    },
-    {
-      "ok": true,
-      "src": "EIA קרוסין ספוט USGC",
-      "msg": "3.3970 @ 2026-11-24 (500 נקודות)",
-      "t": "2026-11-26T00:53:06+00:00"
-    },
-    {
-      "ok": false,
-      "src": "EIA מלאי תזקיקים",
-      "msg": "TimeoutError: The read operation timed out",
-      "t": "2026-11-26T00:53:17+00:00"
+      "msg": "87.57 EUR/MWh @ 2026-11-26 (סריקה)",
+      "t": "2026-11-26T02:35:11+00:00"
     },
     {
       "ok": false,
       "src": "EIA בנזין קמעונאי",
       "msg": "TimeoutError: The read operation timed out",
-      "t": "2026-11-26T00:53:21+00:00"
+      "t": "2026-11-26T02:35:32+00:00"
     },
     {
       "ok": false,
       "src": "EIA מלאי גולמי",
       "msg": "TimeoutError: The read operation timed out",
-      "t": "2026-11-26T00:53:26+00:00"
+      "t": "2026-11-26T02:35:32+00:00"
+    },
+    {
+      "ok": false,
+      "src": "EIA קרוסין ספוט USGC",
+      "msg": "TimeoutError: The read operation timed out",
+      "t": "2026-11-26T02:35:32+00:00"
     },
     {
       "ok": false,
       "src": "EIA ייצוא נפט ומוצרים",
       "msg": "TimeoutError: The read operation timed out",
-      "t": "2026-11-26T00:53:26+00:00"
+      "t": "2026-11-26T02:35:32+00:00"
     },
     {
       "ok": false,
       "src": "EIA דיזל קמעונאי",
       "msg": "TimeoutError: The read operation timed out",
-      "t": "2026-11-26T00:53:26+00:00"
-    },
-    {
-      "ok": true,
-      "src": "EIA Brent ספוט",
-      "msg": "91.8000 @ 2026-11-24 (500 נקודות)",
-      "t": "2026-11-26T00:53:38+00:00"
-    },
-    {
-      "ok": false,
-      "src": "EIA בנזין ספוט USGC",
-      "msg": "TimeoutError: The read operation timed out",
-      "t": "2026-11-26T00:53:39+00:00"
+      "t": "2026-11-26T02:35:32+00:00"
     },
     {
       "ok": false,
       "src": "EIA ULSD ספוט USGC",
       "msg": "TimeoutError: The read operation timed out",
-      "t": "2026-11-26T00:53:43+00:00"
+      "t": "2026-11-26T02:35:54+00:00"
     },
     {
-      "ok": true,
-      "src": "גיבוי",
-      "msg": "Brent נלקח מ-EIA ספוט",
-      "t": "2026-11-26T00:53:43+00:00"
+      "ok": false,
+      "src": "EIA Brent ספוט",
+      "msg": "TimeoutError: The read operation timed out",
+      "t": "2026-11-26T02:35:54+00:00"
+    },
+    {
+      "ok": false,
+      "src": "EIA בנזין ספוט USGC",
+      "msg": "TimeoutError: The read operation timed out",
+      "t": "2026-11-26T02:35:54+00:00"
+    },
+    {
+      "ok": false,
+      "src": "EIA מלאי תזקיקים",
+      "msg": "TimeoutError: The read operation timed out",
+      "t": "2026-11-26T02:35:54+00:00"
     },
     {
       "ok": true,
       "src": "מיזוג",
-      "msg": "6 ערכים קודמים נשמרו",
-      "t": "2026-11-26T00:53:43+00:00"
+      "msg": "8 ערכים קודמים נשמרו",
+      "t": "2026-11-26T02:35:54+00:00"
     }
   ],
   "filled": 9,
   "total": 12,
-  "elapsed": 51.8,
-  "updatedAt": "2026-11-26T00:53:43+00:00"
+  "elapsed": 54.5,
+  "updatedAt": "2026-11-26T02:35:54+00:00"
 }
